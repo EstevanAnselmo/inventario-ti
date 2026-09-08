@@ -1,7 +1,32 @@
+# Python
 __pycache__/
-*.pyc
+*.py[cod]
+*.pyd
+
+# Ambientes virtuais
 .venv/
 venv/
+env/
+
+# Variáveis e segredos locais
 .env
+.env.*
+!.env.example
+.streamlit/secrets.toml
 streamlit_app/.streamlit/secrets.toml
+
+# Logs e arquivos temporários
 *.log
+*.tmp
+*.bak
+
+# Cobertura/testes
+.coverage
+htmlcov/
+.pytest_cache/
+
+# IDEs e sistema operacional
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

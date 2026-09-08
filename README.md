@@ -8,7 +8,7 @@ Projeto pessoal de estudo e desenvolvimento contínuo, criado com foco em organi
 
 ## 📌 Sobre o projeto
 
-O **Inventário de TI** permite cadastrar, consultar, editar, remover e exportar informações relacionadas a equipamentos de Tecnologia da Informação.
+O **Inventário de TI** permite cadastrar, consultar, editar, remover e exportar informações relacionadas a equipamentos de Tecnologia da Informação. Os registros presentes neste repositório são dados fictícios para demonstração.
 
 A aplicação utiliza uma arquitetura separada em camadas, mantendo a interface desacoplada da API e das regras de negócio.
 
@@ -29,7 +29,7 @@ A aplicação utiliza uma arquitetura separada em camadas, mantendo a interface 
 ### 🔐 Autenticação
 
 * Login com usuário e senha.
-* Senha armazenada em formato de hash SHA-256.
+* Senha comparada por hash SHA-256 no protótipo local.
 * Credenciais configuradas através do `secrets.toml`.
 * Estrutura preparada para futuras melhorias de autenticação.
 
@@ -302,8 +302,8 @@ Operações:
 ```http
 GET    /equipamentos
 POST   /equipamentos
-PUT    /equipamentos/{id}
-DELETE /equipamentos/{id}
+PATCH  /equipamentos/{patrimonio}
+DELETE /equipamentos/{patrimonio}
 ```
 
 A documentação interativa da API pode ser acessada através do Swagger:
@@ -316,11 +316,7 @@ http://127.0.0.1:8000/docs
 
 ## 🧪 Testes
 
-Os testes estão organizados em:
-
-```text
-tests/
-```
+A pasta `tests/` está reservada para a suíte de testes automatizados. No estado atual do projeto, as validações devem ser feitas manualmente até que os testes automatizados sejam adicionados.
 
 Antes de publicar alterações, recomenda-se verificar:
 
@@ -434,7 +430,7 @@ __pycache__/
 venv/
 ```
 
-A autenticação atual utiliza SHA-256 como parte do protótipo.
+A autenticação atual utiliza SHA-256 como parte de um protótipo local. Para produção, recomenda-se migrar para um algoritmo apropriado para armazenamento de senhas (como Argon2 ou bcrypt), além de implementar sessões/tokens, gestão de usuários, permissões e proteção contra ataques de força bruta.
 
 Para um ambiente de produção, a autenticação deverá evoluir para uma solução adequada de gerenciamento de senhas, sessões e usuários.
 

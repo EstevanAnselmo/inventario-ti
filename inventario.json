@@ -1,11 +1,29 @@
 {
-    "N-VID-07": {
-        "patrimonio": "N-VID-07",
+    "PAT-0001": {
+        "patrimonio": "PAT-0001",
         "tipo": "Notebook",
-        "marca": "Lenovo",
-        "modelo": "Ideapad Gaming",
-        "usuario": "Estevan Anselmo da Silva",
-        "setor": "TI",
+        "marca": "Dell",
+        "modelo": "Latitude 5440",
+        "usuario": "Usuario Exemplo 01",
+        "setor": "Tecnologia",
         "status": "Ativo"
+    },
+    "PAT-0002": {
+        "patrimonio": "PAT-0002",
+        "tipo": "Desktop",
+        "marca": "Lenovo",
+        "modelo": "ThinkCentre M70q",
+        "usuario": "Usuario Exemplo 02",
+        "setor": "Administracao",
+        "status": "Ativo"
+    },
+    "PAT-0003": {
+        "patrimonio": "PAT-0003",
+        "tipo": "Monitor",
+        "marca": "LG",
+        "modelo": "24MP400",
+        "usuario": "Usuario Exemplo 03",
+        "setor": "Financeiro",
+        "status": "Em estoque"
     }
 }
